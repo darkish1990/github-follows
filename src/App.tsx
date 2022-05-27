@@ -1,6 +1,6 @@
-import FollowersTable from "./features/followers-table/FollowersTable";
+import { FollowersTable } from "./features/followers-table/FollowersTable";
 
-export default () => {
+export const App = () => {
   return (
     <main>
       <FollowersTable />

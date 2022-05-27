@@ -5,7 +5,7 @@ import {
   Stack,
   Typography,
   SxProps,
-  Theme
+  Theme,
 } from "@mui/material";
 
 interface UserCardProps {
@@ -14,7 +14,7 @@ interface UserCardProps {
   followersCount: number;
   sx?: SxProps<Theme>;
 }
-export default ({ src, name, followersCount, sx }: UserCardProps) => (
+export const UserCard = ({ src, name, followersCount, sx }: UserCardProps) => (
   <Card sx={sx}>
     <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
       <Avatar sx={{ marginRight: 1 }} variant="rounded" src={src} />

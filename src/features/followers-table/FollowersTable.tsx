@@ -18,8 +18,8 @@ import "./followers-table.css";
 import { useGetUserQuery, useGetFollowersQuery } from "../api/api-slice";
 import { skipToken } from "@reduxjs/toolkit/dist/query";
 import { useDebounce } from "../../hooks/use-debounce";
-import UserCard from "../../components/user-card/UserCard";
-import Loading from "../../components/loading/Loading";
+import { UserCard } from "../../components/user-card/UserCard";
+import { Loading } from "../../components/loading/Loading";
 import {
   currentPageSelector,
   pageSizeSelector,
@@ -45,7 +45,7 @@ const COLUMNS = [
   { name: "id", title: "ID" },
 ];
 
-export default () => {
+export const FollowersTable = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector(currentPageSelector);
   const pageSize = useSelector(pageSizeSelector);
